@@ -1,0 +1,11 @@
+Clean PUF
+
+clean_puf is a function that given a .dat PUF file, returns the cleaned object. This code is adapted from the STATA/SPSS/SAS code that comes with a PUF file from the NCDB. PUF Files come from the NCDB as .dat files which are fixed-length columns with rows delimited by tab. This function is essentially the same as the SPSS/SAS/STATA code that comes with the PUF files from the NCDB. This function converts the 2016 NCDB .dat file into an R data frame with 136 variables.
+
+Note that this will not work on earlier or later versions of the PUF because the column numbers and positions may be different.
+
+Author: @MCWardMD
+
+Example:
+ new_puf<-clean_puf("root/NCDBProject/")
+ summary(new_puf)
